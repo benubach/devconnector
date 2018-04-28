@@ -4,9 +4,9 @@
   "description": "Traversy Media UDemy NodeJS course",
   "main": "server.js",
   "scripts": {
-    "server": "nodemon server",
-    "start": "node server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon src/server",
+    "start": "node src/server",
+    "test": "mocha src/**/*.test.js"
   },
   "author": "Benjamín Ubach",
   "license": "MIT",
@@ -16,12 +16,15 @@
     "express": "^4.16.3",
     "gravatar": "^1.6.0",
     "jsonwebtoken": "^8.2.1",
-    "mongoose": "^5.0.14",
+    "mongoose": "^5.0.16",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "validator": "^9.4.1"
   },
   "devDependencies": {
-    "nodemon": "^1.17.3"
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1",
+    "nodemon": "^1.17.3",
+    "sinon": "^4.5.0"
   }
 }
