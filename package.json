@@ -6,7 +6,7 @@
   "scripts": {
     "server": "nodemon src/server",
     "start": "node src/server",
-    "test": "mocha src/**/*.test.js"
+    "test": "cross-env NODE_ENV=test nyc --all --reporter=html --reporter=text mocha src/**/*.test.js"
   },
   "author": "Benjamín Ubach",
   "license": "MIT",
@@ -23,8 +23,10 @@
   },
   "devDependencies": {
     "chai": "^4.1.2",
+    "cross-env": "^5.1.4",
     "mocha": "^5.1.1",
     "nodemon": "^1.17.3",
+    "nyc": "^11.7.1",
     "sinon": "^4.5.0"
   }
 }
